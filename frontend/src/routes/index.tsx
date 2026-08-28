@@ -21,7 +21,6 @@ export const Route = createFileRoute("/")({
 });
 
 const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:8000";
-
 type ChatMessage = {
   id: string;
   role: "user" | "assistant";

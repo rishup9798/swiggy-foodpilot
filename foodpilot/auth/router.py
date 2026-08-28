@@ -130,13 +130,13 @@ async def auth_callback(
     frontend_url = "https://swiggy-foodpilot.vercel.app"
     response = RedirectResponse(url=frontend_url, status_code=302)
     response.set_cookie(
-        key="access_token",
-        value=session["access_token"],
-        httponly=True,  # Protect against XSS
-        secure=False,   # Fine for localhost development
-        samesite="lax",
-        max_age=3600 * 24 * 7, # 7 days
-    )
+    key="access_token",
+    value=session["access_token"],
+    httponly=True,
+    secure=True,
+    samesite="none",
+    max_age=3600 * 24 * 7,
+)
     response.delete_cookie("pkce_verifier")
     return response
 
