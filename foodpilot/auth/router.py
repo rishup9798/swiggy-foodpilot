@@ -127,7 +127,7 @@ async def auth_callback(
 
     # Redirect back to the Lovable frontend
     # Lovable usually runs on 8080 or 8081
-    frontend_url = "http://localhost:8080"
+    frontend_url = "https://swiggy-foodpilot.vercel.app"
     response = RedirectResponse(url=frontend_url, status_code=302)
     response.set_cookie(
         key="access_token",

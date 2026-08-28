@@ -134,7 +134,7 @@ async def swiggy_callback(
     logger.info("Swiggy account linked", extra={"user_id": user_id})
 
     # Redirect back to the frontend so the user can continue using the app
-    return RedirectResponse(url="http://localhost:8080", status_code=302)
+    return RedirectResponse(url="https://swiggy-foodpilot.vercel.app", status_code=302)
 
 
 # ── 3. Status ─────────────────────────────────────────────────────────────────
